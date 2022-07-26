@@ -38,13 +38,30 @@ const multiply = function multiplyArray(array) {
 multiply([2,4])
 multiply([2,4,6,8,10,12,14])
 
-const power = function() {
-	
-};
+const power = function powerOfNum(b,e) {
+  let i, pow = 1;
 
-const factorial = function() {
-	
+  for (i=0; i<e; i++){
+    pow = pow*b;
+  }
+  return pow;
 };
+power(4,3)
+
+const factorial = function findFactorial(num) {
+  if (num === 0 || num === 1)
+    return 1;
+    
+  for(let i = num - 1; i >= 1; i--) {
+    num *= i;
+  }
+  return num
+};
+factorial(0)
+factorial(1)
+factorial(2)
+factorial(5)
+factorial(10)
 
 // Do not edit below this line
 module.exports = {
